@@ -28,12 +28,12 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 
 # GPT Knowledge
 
--   [] Plan
+-   [ ] Plan
 
 # GPT Sentiment Comment (Thread/Comment)
 
--   [] Plan
+-   [ ] Plan
 
 # GPT Tag Posts
 
--   [] Plan
+-   [ ] Plan
