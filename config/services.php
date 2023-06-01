@@ -35,6 +35,8 @@ return [
         'client_id' => env('REDDIT_CLIENT_ID'),
         'client_secret' => env('REDDIT_CLIENT_SECRET'),
         'redirect' => env('REDDIT_REDIRECT_URI', '/auth/callback'),
+        'oauth_url' => env('REDDIT_OAUTH_URL', 'https://oauth.reddit.com/'),
+        'user_agent' => env('REDDIT_USER_AGENT', 'Laravel:modgpt:v0.0.1 (by /u/phpadam)'),
     ],
 
 ];
