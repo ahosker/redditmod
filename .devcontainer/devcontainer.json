@@ -1,0 +1,44 @@
+// https://aka.ms/devcontainer.json
+{
+	"name": "Existing Docker Compose (Extend)",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "laravel.test",
+	"workspaceFolder": "/var/www/html",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"onecentlin.laravel5-snippets",
+				"neilbrayfield.php-docblocker",
+				"adrianwilczynski.alpine-js-intellisense",
+				//"danielsanmedium.dscodegpt",
+				//"github.copilot",
+				"github.copilot-nightly",
+				"heybourn.headwind",
+				"amiralizadeh9480.laravel-extra-intellisense",
+				"open-southeners.laravel-pint",
+				"cierra.livewire-vscode",
+				"bmewburn.vscode-intelephense-client",
+				"mehedidracula.php-namespace-resolver",
+				"esbenp.prettier-vscode",
+				"bradlc.vscode-tailwindcss",
+				"gruntfuggly.todo-tree",
+				"lennardv.livewire-goto-updated",
+				"ryannaddy.laravel-artisan"
+				// "mikestead.dotenv",
+				// "amiralizadeh9480.laravel-extra-intellisense",
+				// "ryannaddy.laravel-artisan",
+				// "onecentlin.laravel5-snippets",
+				// "onecentlin.laravel-blade"
+			],
+			"settings": {}
+		}
+	},
+	"remoteUser": "sail",
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	// "forwardPorts": [],
+	// "runServices": [],
+	// "shutdownAction": "none",
+}
