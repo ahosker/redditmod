@@ -10,9 +10,9 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 
 # GPT Reply
 
--   [ ] Install common Laravel Packages
--   [ ] Socialite Login
--   [ ] Socialite Reddit Login
+-   [x] Install common Laravel Packages
+-   [x] Socialite Login
+-   [x] Socialite Reddit Login
 -   [ ] User - Add Subreddit to "manage" to DB.
 -   [ ] RSS Feed of Subreddit new threads to DB.
 -   [ ] Test RSS->Reply Pipeline
@@ -37,3 +37,21 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 # GPT Tag Posts
 
 -   [ ] Plan
+
+## Notes
+
+-   https://github.com/ahosker/redditmod
+
+# Reddit API
+
+-   Into: https://www.reddit.com/wiki/api/
+-   Guide https://github.com/reddit-archive/reddit/wiki/OAuth2
+-   Entry Points https://www.reddit.com/dev/api
+-   Entry Points by Scope - https://www.reddit.com/dev/api/oauth
+-   Archived Docs - https://github.com/reddit-archive/reddit/wiki/API
+-   Scopes - https://www.reddit.com/api/v1/scopes
+-   PHP Example - https://github.com/reddit-archive/reddit/wiki/OAuth2-PHP-Example
+
+# Socialite
+
+-   Socialite (reddit) Docs: https://socialiteproviders.com/Reddit/

@@ -9,6 +9,7 @@ use App\Http\Livewire\Auth\Passwords\Reset;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Auth\Verify;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,4 +54,15 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', LogoutController::class)
         ->name('logout');
+});
+
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('reddit')->redirect();
+});
+
+Route::get('/auth/callback', function () {
+    $user = Socialite::driver('reddit')->user();
+
+    // $user->token
+    return $user->token;
 });
