@@ -8,6 +8,8 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 
 ## Roadmap
 
+# GPT Reply
+
 -   [ ] Install common Laravel Packages
 -   [ ] Socialite Login
 -   [ ] Socialite Reddit Login
@@ -23,4 +25,15 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 -   [ ] Test on my subreddit
 -   [ ] Release to paid to public.
 -   [ ] Release source to public, with licenceing, etc..
--   [ ]
+
+# GPT Knowledge
+
+-   [] Plan
+
+# GPT Sentiment Comment (Thread/Comment)
+
+-   [] Plan
+
+# GPT Tag Posts
+
+-   [] Plan
