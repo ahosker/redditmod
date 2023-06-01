@@ -37,8 +37,37 @@
 		}
 	},
 	"remoteUser": "sail",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html"
+	"postCreateCommand": "chown -R 1000:1000 /var/www/html",
+	"forwardPorts": [
+		80,
+		5173,
+		3306,
+		9000,
+		8900,
+		6379
+	],
+	"portsAttributes": {
+		"80": {
+			"label": "www"
+		},
+		"5173": {
+			"label": "Vite"
+		},
+		"3306": {
+			"label": "mysql"
+		},
+		"9000": {
+			"label": "minio"
+		},
+		"8900": {
+			"label": "minio console"
+		},
+		"6379": {
+			"label": "redis"
+		}
+	},
+	"shutdownAction": "stopCompose"
 	// "forwardPorts": [],
 	// "runServices": [],
-	// "shutdownAction": "none",
+	 
 }
