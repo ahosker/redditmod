@@ -30,6 +30,7 @@
     </head>
 
     <body>
+        <x-notifications />
         @yield('body')
     </body>
 </html>
