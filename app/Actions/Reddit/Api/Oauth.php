@@ -2,6 +2,7 @@
 
 namespace App\Actions\Reddit\Api;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Http;
 use Lorisleiva\Actions\Concerns\AsAction;
 use Lorisleiva\Actions\Concerns\WithAttributes;
@@ -11,12 +12,15 @@ class Oauth
     use AsAction;
     use WithAttributes;
 
+    public User $user;
+
     //Set Input Rules
     public function rules()
     {
         return [
             'url' => ['required'],
-            'token' => ['required'],
+            'user_id' => ['required'],
+            'reddit_auth_id' => ['required'],
         ];
     }
 
@@ -31,6 +35,7 @@ class Oauth
 
     private function execute(): \Illuminate\Support\Collection
     {
+
         //Validate Atributes
         $this->validateAttributes();
 
@@ -49,9 +54,12 @@ class Oauth
 
     private function make_request()
     {
-        return Http::withToken($this->token)
+
+        return Http::withToken(\App\Actions\Reddit\Api\GetToken::run($this->user_id, $this->reddit_auth_id))
             ->withHeaders(['User-Agent' => config('services.reddit.user_agent')])
-            ->get(config('services.reddit.oauth_url').$this->url);
+            ->get(config('services.reddit.oauth_url').$this->url, [
+                'raw_json' => '1',
+            ]);
 
     }
 

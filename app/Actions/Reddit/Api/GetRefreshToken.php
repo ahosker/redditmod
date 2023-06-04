@@ -4,12 +4,12 @@ namespace App\Actions\Reddit\Api;
 
 use Lorisleiva\Actions\Concerns\AsAction;
 
-class Me
+class GetRefreshToken
 {
     use AsAction;
 
     public function handle()
     {
-        return Oauth::make()->set('url', 'api/v1/me')->handle();
+        return '7786486-HZ7Glo-ELHiNDqgGK78ySgzpcIS2sQ';
     }
 }
