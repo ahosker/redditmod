@@ -12,6 +12,8 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $with = ['redditAuth'];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -42,4 +44,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Relationships
+    public function redditAuth()
+    {
+        return $this->hasMany(RedditAuth::class);
+    }
+
+    //atributes
+    public function getSubredditsAttribute()
+    {
+        //return $this->redditAuth->first()->subreddits;
+        return $this->redditAuth->map(function ($item) {
+            return $item->subreddits;
+        })->flatten();
+    }
 }
