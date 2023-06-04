@@ -51,6 +51,7 @@ I'd also like to "tag" posts with a flare, if it is a Question, Informative Post
 -   Archived Docs - https://github.com/reddit-archive/reddit/wiki/API
 -   Scopes - https://www.reddit.com/api/v1/scopes
 -   PHP Example - https://github.com/reddit-archive/reddit/wiki/OAuth2-PHP-Example
+-   Bot Ettiqute https://www.reddit.com/r/Bottiquette/wiki/bottiquette/
 
 # Socialite
 
